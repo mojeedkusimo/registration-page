@@ -5,6 +5,12 @@ let dirLastName = document.querySelector('#lastname');
 let address = document.querySelector('#address');
 let emailId = document.querySelector('#email');
 let password = document.querySelector('#password');
+let title = document.querySelector('#title');
+let username = document.querySelector('#username');
+let phone = document.querySelector('#phoneNumber');
+let dirBvn = document.querySelector('#bvn');
+let city = document.querySelector('#city');
+let businessName = document.querySelector('#businessName');
 let response = document.querySelector('#response');
 let errorMsg = document.querySelector('#error');
 
@@ -34,16 +40,16 @@ submitButton.addEventListener(
                 dirLastName: dirLastName.value,
                 address: address.value,
                 emailId: emailId.value,
-                password: "",
+                password: password.value,
                 reference: "",
                 uid: "",
-                businessName: "",
-                title: "",
-                dirBvn: "",
+                businessName: businessName.value,
+                title: title.value,
+                dirBvn: dirBvn.value,
                 dirMiddleName: "",
-                userName: "",
-                phone: "",
-                city: "",
+                userName: username.value,
+                phone: phone.value,
+                city: city.value    ,
                 customerRiskRating: "",
                 tier: "",
                 dirDateOfBirth: "",

@@ -10,10 +10,14 @@
 </head>
 
 <body>
-    <h1 class="text-center text-success mt-5">Merhcant Registration Page</h1>
+    <h1 class="text-center text-success mt-5">Merchant Registration Page</h1>
     <form class="m-3 p-3 border border-success rounded">
         <p class="text-center text-primary" id="response"></p>
         <p class="text-center text-danger" id="error"></p>
+        <div class="form-group">
+            <label for="businessName">Business Name</label>
+            <input type="text" class="form-control" id="businessName" placeholder="Business Name" required>
+        </div>
         <div class="row">
             <div class="form-group col-6">
               <label for="title">Title</label>
@@ -39,9 +43,15 @@
                 <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
             </div>
         </div>
-        <div class="form-group">
-            <label for="businessName">Business Name</label>
-            <input type="text" class="form-control" id="businessName" placeholder="Business Name" required>
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="middlename">Middle Name</label>
+                <input type="text" class="form-control" id="middlename" placeholder="Middle Name" required>
+            </div>
+            <div class="form-group col-6">
+                <label for="reference">Reference</label>
+                <input type="text" class="form-control" id="reference" placeholder="reference" required>
+            </div>
         </div>
         <div class="row">
             <div class="form-group col-6">
@@ -62,6 +72,34 @@
                 <label for="bvn">BVN</label>
                 <input type="text" class="form-control" id="bvn" placeholder="BVN" required>
             </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="dob">Date Of Birth</label>
+                <input type="date" class="form-control" id="dob" placeholder="Date Of Birth" required>
+            </div>
+            <div class="form-group col-6">
+                <label for="country-of-birth">Country Of Birth</label>
+                <input type="text" class="form-control" id="country-of-birth" placeholder="Country Of Birth" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-6">
+              <label for="title">Tier</label>
+              <select class="form-select col-12" id="tier" style="height: 55%;">
+                <option selected>Select a Tier</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+            <div class="form-group col-6">
+                <label for="customer-risk-rating">Customer Risk Rating</label>
+                <input type="number" class="form-control" id="customer-risk-rating" placeholder="Customer Risk Rating" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="uid">UID</label>
+            <input type="text" class="form-control" id="uid" placeholder="UID" required>
         </div>
         <div class="form-group">
             <label for="email">Email address</label>

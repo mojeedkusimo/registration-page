@@ -11,6 +11,13 @@ let phone = document.querySelector('#phoneNumber');
 let dirBvn = document.querySelector('#bvn');
 let city = document.querySelector('#city');
 let businessName = document.querySelector('#businessName');
+let dirDateOfBirth = document.querySelector('#dob');
+let countryOfBirth = document.querySelector('#country-of-birth');
+let dirMiddleName = document.querySelector('#middlename');
+let reference = document.querySelector('#reference');
+let customerRiskRating = document.querySelector('#customer-risk-rating');
+let tier = document.querySelector('#tier');
+let uid = document.querySelector('#uid');
 let response = document.querySelector('#response');
 let errorMsg = document.querySelector('#error');
 
@@ -32,28 +39,36 @@ submitButton.addEventListener(
             errorMsg.innerHTML = "Please fill all fields";
         } else if ( password.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
+        } else if ( phone.value == "") {
+            errorMsg.innerHTML = "Please fill all fields";
+        } else if ( dirBvn.value == "") {
+            errorMsg.innerHTML = "Please fill all fields";
+        } else if ( dirDateOfBirth.value == "") {
+            errorMsg.innerHTML = "Please fill all fields";
+        } else if ( businessName.value == "") {
+            errorMsg.innerHTML = "Please fill all fields";
         } else {
             
-            response.innerHTML = "loading...";
+            response.innerHTML = "processing request...";
             let requestBody = {
                 dirFirstName: dirFirstName.value,
                 dirLastName: dirLastName.value,
                 address: address.value,
                 emailId: emailId.value,
                 password: password.value,
-                reference: "",
-                uid: "",
+                reference: reference.value,
+                uid: uid.value,
                 businessName: businessName.value,
                 title: title.value,
                 dirBvn: dirBvn.value,
-                dirMiddleName: "",
+                dirMiddleName: dirMiddleName.value,
                 userName: username.value,
                 phone: phone.value,
-                city: city.value    ,
-                customerRiskRating: "",
-                tier: "",
-                dirDateOfBirth: "",
-                countryOfBirth: ""
+                city: city.value,
+                customerRiskRating: customerRiskRating.value,
+                tier: tier.value,
+                dirDateOfBirth: dirDateOfBirth.value,
+                countryOfBirth: countryOfBirth.value
             }
     
             let info = {

@@ -74,7 +74,7 @@ customerSubmitButton.addEventListener(
                 body: JSON.stringify(requestBody)
             }
     
-            let request = await fetch('https://enaira.istemlabsafrica.site/api/register/customer', info);
+            let request = await fetch('https://enaira.istemlabsafrica.site/api/register/consumer', info);
             let result = await request.json();
     
             response.innerHTML = result.message;

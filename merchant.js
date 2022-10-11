@@ -1,51 +1,49 @@
 
-let submitButton = document.querySelector('button');
+// Merchant variables
+let merchantSubmitButton = document.querySelector('#merchant-submit');
 let dirFirstName = document.querySelector('#firstname');
 let dirLastName = document.querySelector('#lastname');
-let address = document.querySelector('#address');
-let emailId = document.querySelector('#email');
-let password = document.querySelector('#password');
-let title = document.querySelector('#title');
-let username = document.querySelector('#username');
-let phone = document.querySelector('#phoneNumber');
+let merchantAddress = document.querySelector('#address');
+let merchantEmailId = document.querySelector('#email');
+let merchantPassword = document.querySelector('#password');
+let merchantTitle = document.querySelector('#title');
+let merchantUsername = document.querySelector('#username');
+let merchantPhone = document.querySelector('#phoneNumber');
 let dirBvn = document.querySelector('#bvn');
-let city = document.querySelector('#city');
+let merchantCity = document.querySelector('#city');
 let businessName = document.querySelector('#businessName');
 let dirDateOfBirth = document.querySelector('#dob');
-let countryOfBirth = document.querySelector('#country-of-birth');
+let merchantCountryOfBirth = document.querySelector('#country-of-birth');
 let dirMiddleName = document.querySelector('#middlename');
-let reference = document.querySelector('#reference');
+let merchantReference = document.querySelector('#reference');
 let customerRiskRating = document.querySelector('#customer-risk-rating');
-let tier = document.querySelector('#tier');
-let uid = document.querySelector('#uid');
+let merchantTier = document.querySelector('#tier');
+let merchantUid = document.querySelector('#uid');
+let accountNumber = document.querySelector('#account-number');
 let response = document.querySelector('#response');
 let errorMsg = document.querySelector('#error');
 
-submitButton.addEventListener(
+merchantSubmitButton.addEventListener(
     'click', async (e) => {
         e.preventDefault();
         
         errorMsg.innerHTML = "";
         response.innerHTML = "";
-
+        
         
         if (dirFirstName.value  == "") {
             errorMsg.innerHTML = "Please fill all fields";
         } else if ( dirLastName.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
-        } else if ( address.value.value == "") {
+        } else if ( merchantAddress.value.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
-        } else if ( emailId.value == "") {
+        } else if ( merchantEmailId.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
-        } else if ( password.value == "") {
+        } else if ( merchantPassword.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
-        } else if ( phone.value == "") {
-            errorMsg.innerHTML = "Please fill all fields";
-        } else if ( dirBvn.value == "") {
+        } else if ( merchantPhone.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
         } else if ( dirDateOfBirth.value == "") {
-            errorMsg.innerHTML = "Please fill all fields";
-        } else if ( businessName.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
         } else {
             
@@ -53,24 +51,26 @@ submitButton.addEventListener(
             let requestBody = {
                 dirFirstName: dirFirstName.value,
                 dirLastName: dirLastName.value,
-                address: address.value,
-                emailId: emailId.value,
-                password: password.value,
+                address: merchantAddress.value,
+                emailId: merchantEmailId.value,
+                password: merchantPassword.value,
                 reference: reference.value,
                 uid: uid.value,
                 businessName: businessName.value,
-                title: title.value,
+                title: merchantTitle.value,
                 dirBvn: dirBvn.value,
                 dirMiddleName: dirMiddleName.value,
-                userName: username.value,
-                phone: phone.value,
-                city: city.value,
+                userName: merchantUsername.value,
+                phone: merchantPhone.value,
+                city: merchantCity.value,
                 customerRiskRating: customerRiskRating.value,
-                tier: tier.value,
+                tier: merchantTier.value,
                 dirDateOfBirth: dirDateOfBirth.value,
-                countryOfBirth: countryOfBirth.value
+                countryOfBirth: merchantCountryOfBirth.value,
+                accountNumber: accountNumber.value
+
             }
-    
+
             let info = {
                 method: 'POST',
                 headers: {
@@ -81,9 +81,9 @@ submitButton.addEventListener(
     
             let request = await fetch('https://enaira.istemlabsafrica.site/api/register/merchant', info);
             let result = await request.json();
-    
+            
             response.innerHTML = result.message;
         }
 
     }
-)
+);

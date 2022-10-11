@@ -10,23 +10,20 @@
 </head>
 
 <body>
-    <h1 class="text-center text-success mt-5">Merchant Registration Page</h1>
+    <h1 class="text-center text-success mt-5">Customer Registration Page</h1>
     <form class="m-3 p-3 border border-success rounded">
         <p class="text-center text-primary" id="response"></p>
         <p class="text-center text-danger" id="error"></p>
-        <div class="form-group">
-            <label for="businessName">Business Name</label>
-            <input type="text" class="form-control" id="businessName" placeholder="Business Name" required>
-        </div>
+
         <div class="row">
             <div class="form-group col-6">
-              <label for="title">Title</label>
-              <select class="form-select col-12" id="title" style="height: 55%;">
-                <option selected>Select a title</option>
-                <option value="Mr.">Mr.</option>
-                <option value="Mrs.">Mrs.</option>
-                <option value="Miss">Miss</option>
-              </select>
+                <label for="title">Title</label>
+                <select class="form-select col-12" id="title" style="height: 55%;">
+                    <option selected>Select a title</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Miss">Miss</option>
+                </select>
             </div>
             <div class="form-group col-6">
                 <label for="username">Username</label>
@@ -85,16 +82,16 @@
         </div>
         <div class="row">
             <div class="form-group col-6">
-              <label for="title">Tier</label>
-              <select class="form-select col-12" id="tier" style="height: 55%;">
-                <option selected>Select a Tier</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
+                <label for="title">Tier</label>
+                <select class="form-select col-12" id="tier" style="height: 55%;">
+                    <option selected>Select a Tier</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
             </div>
             <div class="form-group col-6">
-                <label for="customer-risk-rating">Customer Risk Rating</label>
-                <input type="number" class="form-control" id="customer-risk-rating" placeholder="Customer Risk Rating" required>
+                <label for="account-number">Account Number</label>
+                <input type="text" class="form-control" id="account-number" placeholder="Account Number" required>
             </div>
         </div>
         <div class="form-group">
@@ -109,10 +106,13 @@
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Password" required>
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success" id="customer-submit">Submit</button>
+        <p class="m-1">
+            <a href="merchant.html" class="text-success font-weight-bold">Want to be a Merchant? Click here</a>
+        </p>
     </form>
 
-    <script src="script.js"></script>
+    <script src="customer.js"></script>
 </body>
 
 </html>

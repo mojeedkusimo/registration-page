@@ -17,8 +17,9 @@ let customerReference = document.querySelector('#reference');
 let customerTier = document.querySelector('#tier');
 let customerUid = document.querySelector('#uid');
 let customerResponse = document.querySelector('#response');
-let customerErrorMsg = document.querySelector('#error');
+let referralCode = document.querySelector('#referral-code');
 let accountNumber = document.querySelector('#account-number');
+let customerErrorMsg = document.querySelector('#error');
 let response = document.querySelector('#response');
 let errorMsg = document.querySelector('#error');
 
@@ -44,6 +45,10 @@ customerSubmitButton.addEventListener(
             errorMsg.innerHTML = "Please fill all fields";
         } else if ( customerDateOfBirth.value == "") {
             errorMsg.innerHTML = "Please fill all fields";
+        } else if ( accountNumber.value == "") {
+            errorMsg.innerHTML = "Please fill all fields";
+        } else if ( customerUsername.value == "") {
+            errorMsg.innerHTML = "Please fill all fields";
         } else {
             
             response.innerHTML = "processing request...";
@@ -64,7 +69,8 @@ customerSubmitButton.addEventListener(
                 tier: customerTier.value,
                 dateOfBirth: customerDateOfBirth.value,
                 countryOfBirth: customerCountryOfBirth.value,
-                accountNumber: accountNumber.value
+                accountNumber: accountNumber.value,
+                referralCode: referralCode.value
             }
     
             let info = {

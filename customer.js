@@ -59,6 +59,7 @@ customerSubmitButton.addEventListener(
                 middleName: customerMiddleName.value,
                 userName: customerUsername.value,
                 phone: customerPhone.value,
+                postalCode: "900110",
                 city: customerCity.value,
                 tier: customerTier.value,
                 dateOfBirth: customerDateOfBirth.value,

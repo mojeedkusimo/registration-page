@@ -72,6 +72,8 @@ customerSubmitButton.addEventListener(
                 accountNumber: accountNumber.value,
                 referralCode: referralCode.value
             }
+
+            console.log(requestBody);
     
             let info = {
                 method: 'POST',

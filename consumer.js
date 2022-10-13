@@ -72,8 +72,6 @@ customerSubmitButton.addEventListener(
                 accountNumber: accountNumber.value,
                 referralCode: referralCode.value
             }
-
-            console.log(requestBody);
     
             let info = {
                 method: 'POST',
@@ -86,7 +84,6 @@ customerSubmitButton.addEventListener(
             let request = await fetch('https://enaira.istemlabsafrica.site/api/register/consumer', info);
             let result = await request.json();
     
-            console.log(result);
             response.innerHTML = result.message;
         }
 
